@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        
+    </div>
+    </header>
+    
+<div class="container">
+        <h2>Login</h2>
+        <div class="content">
+            
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter Email address" id="email" name="email" required>
+            </div>
+            
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter password" id="password" name="password" required>
+            </div>
+        </div>
+        <div class="button-container">
+            <button type="submit" onclick="func()">Login</button>
+</div>
+<script>
+    function func(){
+    var email = document.getElementById('email').value;
+    var pass = document.getElementById('password').value;
+    if(email == 'shruti@gmail.com' && pass == '123'){
+        alert("successful !");
+        window.location.assign =('home.html');
+    }
+    else{
+        alert('Invalid entry')
+    }
+    }
+</script>
+
+</body>
+</html>
