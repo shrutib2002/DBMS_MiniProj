@@ -62,8 +62,8 @@
                     <td>'.$date.'</td>
                     <td>'.$time.'</td>
                     <td>
-                    <a class="btn btn-primary btn-sm" href="editAttendance.php?prof_id='.$aid.'">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="deleteAttendance.php?prof_id='.$aid.'">Delete</a>
+                    <a class="btn btn-primary btn-sm" href="editAttendance.php?aid='.$aid.'">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="deleteAttendance.php?aid='.$aid.'">Delete</a>
 
                     </td>
                     </tr>
