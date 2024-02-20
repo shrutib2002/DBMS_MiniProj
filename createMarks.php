@@ -31,7 +31,7 @@ if( $_SERVER['REQUEST_METHOD']== 'POST'){
     $ext_marks =$_POST["ext_marks"];
     $total =$_POST["total"];
     $ac_id =$_POST["ac_id"];
-    $status =$_POST["status"]
+    $status =$_POST["status"];
 
     do{
         if(empty($usn) || empty($course_id) ||empty($int_marks) || empty($ext_marks) || empty($total) ||empty($ac_id)||  empty($status)){
