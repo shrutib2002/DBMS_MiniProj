@@ -13,74 +13,57 @@
     <link rel="stylesheet" href="./styles/Hstyle.css" />
 </head>
 <body>
-<div class="container my-5">
-<nav class="sidebar close">
-  <header>
-    <div class="image-text">
-      <div class="text header-text">
-        <span class="main">Student Dashboard</span>
-      </div>
-    </div>
-    <i class="bx bx-chevron-right toggle"></i>
-  </header>
-
-  <div class="menu-bar">
-    <div class="menu">
-      <ul class="menu-links">
-        <li class="nav-link">
-          <i class="fa-solid fa-users"></i>
-          <a href="#">
-            <span class="text nav-text">Students</span>
-          </a>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-chalkboard-user"></i>
-          <a href="professor.php">
-            <span class="text nav-text">Professors</span>
-          </a>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-book-open-reader"></i>
-          <a href="#">
-            <span class="text nav-text">Courses </span>
-          </a>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-clipboard-user"></i>
-          <a href="#">
-            <span class="text nav-text">Attendance</span>
-          </a>
-        </li>
-        <li class="nav-link">
-          <i class="fa-solid fa-paste"></i>
-          <a href="#">
-            <span class="text nav-text">Marks</span>
-          </a>
-        </li>
+<div id="sidebar">
+      <header></header>
+      <ul>
+          <li>
+              <a href="students.php">
+                  <i class="fa-solid fa-users"></i>
+                  <span>Students</span>
+              </a>
+          </li>
+          <li>
+              <a href="professor.php">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>Professor</span>
+              </a>
+          </li>
+          <li>
+              <a href="course.php">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  <span>Courses</span>
+              </a>
+          </li>
+          <li>
+              <a href="attendance.php">
+                  <i class="fa-solid fa-clipboard-user"></i>
+                  <span>Attendance</span>
+              </a>
+          </li>
+          <li>
+              <a href="academic.php">
+              <i class="fa-solid fa-calendar-days"></i>
+                  <span>Academic Year</span>
+              </a>
+          </li>
+          <li>
+              <a href="marks.php">
+                  <i class="fa-solid fa-paste"></i>
+                  <span>Marks</span>
+              </a>
+          </li>
+          <!-- Add more options as needed -->
       </ul>
-    </div>
-
-    <div class="bottom-content">
-      <li class="mode">
-        <div class="moon-sun">
-          <i class="bx bx-moon icons moon"></i>
-          <i class="bx bx-sun icons sun"></i>
-        </div>
-        <span class="mode-text text">Dark Mode</span>
-        <div class="toggle-switch">
-          <span class="switch"></span>
-          <script src="./scripts/script.js"></script>
-        </div>
-      </li>
-    </div>
+      <footer></footer>
   </div>
-</nav>
+  <div id="content">
+<div class="container my-5">
 
     <div class="main-content">
         <h2>List of Students</h2>
         <a class="btn btn-primary" href="createStudent.php" role="button">New Student</a>
         <br>
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>USN</th>
@@ -149,5 +132,6 @@
         </table>
     </div>
 </div>
+              </div>
 </body>
 </html>

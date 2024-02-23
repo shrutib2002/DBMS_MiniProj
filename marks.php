@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/Hstyle.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
+<div id="sidebar">
+      <header></header>
+      <ul>
+          <li>
+              <a href="students.php">
+                  <i class="fa-solid fa-users"></i>
+                  <span>Students</span>
+              </a>
+          </li>
+          <li>
+              <a href="professor.php">
+                  <i class="fa-solid fa-chalkboard-user"></i>
+                  <span>Professor</span>
+              </a>
+          </li>
+          <li>
+              <a href="course.php">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  <span>Courses</span>
+              </a>
+          </li>
+          <li>
+              <a href="attendance.php">
+                  <i class="fa-solid fa-clipboard-user"></i>
+                  <span>Attendance</span>
+              </a>
+          </li>
+          <li>
+              <a href="academic.php">
+              <i class="fa-solid fa-calendar-days"></i>
+                  <span>Academic Year</span>
+              </a>
+          </li>
+          <li>
+              <a href="marks.php">
+                  <i class="fa-solid fa-paste"></i>
+                  <span>Marks</span>
+              </a>
+          </li>
+          <!-- Add more options as needed -->
+      </ul>
+      <footer></footer>
+  </div>
+  <div id="content">
 <div class="container my-5">
     <h2>List of Marks</h2>
     <a class="btn btn-primary" href="createMarks.php" role="button">New Marks</a>
     <br>
-    <table class="table">
+    <table class="table table-bordered">
         <thead>
         <tr>
             <th>USN</th>
@@ -73,6 +119,7 @@
         ?>
         </tbody>
     </table>
+</div>
 </div>
 </body>
 </html>
