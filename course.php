@@ -43,7 +43,7 @@
               </a>
           </li>
           <li>
-              <a href="marks.html">
+              <a href="marks.php">
                   <i class="fa-solid fa-paste"></i>
                   <span>Marks</span>
               </a>

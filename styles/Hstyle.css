@@ -8,7 +8,7 @@ body {
 #sidebar {
   width: 60px;
   height: 100vh;
-  background: linear-gradient(to bottom,#FFE8D6,#495057);
+  background: linear-gradient(to bottom,#CCD5AE,#D4A373);
   color: #ffffff;
   transition: width 0.3s;
   overflow-x: hidden;
@@ -29,7 +29,7 @@ body {
   text-align: center;
   font-size: 1.2em;
   font-weight: bold;
-  border-bottom: 1px solid #495057;
+  border-bottom: 1px solid #D4A373;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,13 +47,13 @@ body {
   display: flex;
   align-items: center;
   padding: 15px;
-  border-bottom: 1px solid #495057;
+  border-bottom: 1px solid #D4A373;
   transition: background-color 0.3s;
   overflow: hidden;
 }
 
 #sidebar li:hover {
-  background-color: #495057;
+  background-color: #D4A373;
 }
 
 #sidebar li a {
