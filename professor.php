@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="./styles/Hstyle.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
-<body>
-<div id="sidebar">
+<body style="background-color: #E9EDC9">
+<div id="sidebar" style="  background: linear-gradient(to bottom,#CCD5AE,#D4A373)
+">
       <header></header>
       <ul>
+      <li>
+              <a href="home.php">
+              <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+              </a>
+          </li>
           <li>
               <a href="students.php">
                   <i class="fa-solid fa-users"></i>
@@ -56,8 +63,8 @@
 <div class="container my-5">
         <h2>List of Professor</h2>
         <a class="btn btn-primary" href="createProfessor.php" role="button">New Professor</a>
-        <br>
-        <table class="table table-bordered">
+        <br><br>
+        <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
                 <tr>
                     <th>Professor Id</th>

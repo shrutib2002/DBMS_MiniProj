@@ -12,11 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles/Hstyle.css" />
 </head>
-<body style="background-color: #FFFFF0">
-<div id="sidebar" style="  background: linear-gradient(to bottom,#E5E4E2)
+<body style="background-color: #E9EDC9">
+<div id="sidebar" style="  background: linear-gradient(to bottom,#CCD5AE,#D4A373)
 ">
       <header></header>
       <ul>
+      <li>
+              <a href="home.php">
+              <i class="fa-solid fa-house"></i>
+                  <span>Home</span>
+              </a>
+          </li>
           <li>
               <a href="students.php">
                   <i class="fa-solid fa-users"></i>
@@ -64,7 +70,8 @@
         <h2>List of Students</h2>
         <a class="btn btn-primary" href="createStudent.php" role="button">New Student</a>
         <br><br>
-        <table style="background-color: #DBD0BD" class="table table-bordered">
+        <div></div>
+        <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
                 <tr>
                     <th>USN</th>

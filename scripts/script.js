@@ -27,11 +27,15 @@ console.log(sidebar.classList.contains("close"));
 
 
 function func(){
-    var email = document.getElementById('email').value;
-    var pass = document.getElementById('password').value;
+    var email = document.getElementById('l1').value;
+    var pass = document.getElementById('l2').value;
     if(email == 'shruti@gmail.com' && pass == '123'){
         alert("successful !");
-        window.location = "./home.html"
+        window.location = "./home.php"
+    }
+    else if(email == 'umme@gmail.com' && pass == '123'){
+      alert("successful !");
+      window.location = "./home.php"
     }
     else{
         alert('Invalid entry')

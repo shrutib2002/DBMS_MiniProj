@@ -18,31 +18,19 @@
         <div class="content">
             
             <div class="input-box">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter Email address" id="email" name="email" required>
+                <label id="boxText" for="email">Email</label>
+                <input id=l1 type="email" placeholder="Enter Email address" name="email" required>
             </div>
             
             <div class="input-box">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Enter password" id="password" name="password" required>
+                <label id="boxText" for="password">Password</label>
+                <input id="l2" type="password" placeholder="Enter password" name="password" required>
             </div>
         </div>
         <div class="button-container">
-            <button type="submit" onclick="func()">Login</button>
-</div>
-<script>
-    function func(){
-    var email = document.getElementById('email').value;
-    var pass = document.getElementById('password').value;
-    if(email == 'shruti@gmail.com' && pass == '123'){
-        alert("successful !");
-        window.location.assign =('home.html');
-    }
-    else{
-        alert('Invalid entry')
-    }
-    }
-</script>
+            <button id="l3" onclick="func()">Login</button>
+        </div>
+        <script src="./scripts/script.js"></script>
 
 </body>
 </html>

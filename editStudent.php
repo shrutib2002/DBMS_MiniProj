@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <title>Edit Student</title>
 </head>
-<body>
+<body style="background-color: #E9EDC9" class="body">
     <div class="container my-5">
         <h2>Edit Student</h2>
         <!-- Form for editing student details -->
