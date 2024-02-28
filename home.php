@@ -132,28 +132,53 @@ if ($result && $result->num_rows > 0) {
                   <span>Marks</span>
               </a>
           </li>
+          
           <!-- Add more options as needed -->
       </ul>
-      <footer></footer>
+      <footer>
+      <li>
+              <a href="index.html">
+              <i class="fa-solid fa-power-off"></i>
+                  <span>Log out</span>
+              </a>
+          </li>
+
+      </footer>
   </div>
   <div id="content">
       <!-- Main content goes here -->
-      <div style="height:200px"></div>
+      <div style="height:100px">
+        <div style="height: auto; width: 350px;background: linear-gradient(to bottom,#CCD5AE,#D4A373);border:1px solid white;border-radius: 10px;position: absolute; top: 10px;right: 10px;">
+           <center><h2>ACADEMIC YEAR :2023-24<h2></center>
+        </div>
+      </div>
+      <h1 style="text-shadow: 2px 2px #A5A58D;">
+          <center>STUDENT ATTENDANCE AND MARKS MANAGEMENT SYSTEM</center>
+        </h1>
       <div class="container">
   <div class="box">
     <h2><i class="fa-solid fa-users"></i></h2>
     <h2>Students: <?php echo $student_count; ?></h2>
   </div>
   <div class="box">
- <h2> <i class="fa-solid fa-chalkboard-user"></i></h2>
- <h2>Professors: <?php echo $professor_count; ?></h2>
+          <h2> <i class="fa-solid fa-chalkboard-user"></i></h2>
+          <h2>Professors: <?php echo $professor_count; ?></h2>
   </div>
   <div class="box">
     <h2> <i class="fa-solid fa-book-open-reader"></i></h2>
     <h2>Courses: <?php echo $course_count; ?></h2>
   </div>
-</div>
+  </div><br><br><br>
+  <div class="notice">
+    <h2>NOTICE:</h2>
+    <div class="notice1" style="background-color:#CCD5AE; height:30px;display:flex;align-items:center; width:480px;justify-content:center;">
+      Result of December 2023/January 2024 Examination : <a href="marks.php">Click here</a>
+    </div><br>
+    <div class="notice1" style="background-color:#CCD5AE; height:30px;display:flex;align-items:center; width:480px;justify-content:center;">
+      Result of December 2023/January 2024 Examination : <a href="marks.php">Click here</a>
+    </div>
   </div>
+</div>
   
   </body>
 </html>

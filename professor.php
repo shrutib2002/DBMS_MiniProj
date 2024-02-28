@@ -62,7 +62,7 @@
   <div id="content">
 <div class="container my-5">
         <h2>List of Professor</h2>
-        <a class="btn btn-primary" href="createProfessor.php" role="button">New Professor</a>
+        <a class="btn btn-secondary" href="createProfessor.php" role="button">New Professor</a>
         <br><br>
         <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
@@ -118,8 +118,8 @@
                     <td>'.$phone_no.'</td>
                     <td>'.$salary.'</td>
                     <td>
-                    <a class="btn btn-primary btn-sm" href="editProfessor.php?prof_id='.$prof_id.'">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="deleteProfessor.php?prof_id='.$prof_id.'">Delete</a>
+                    <a class="btn btn-secondary btn-sm" href="editProfessor.php?prof_id=' . $prof_id . '&amp;course_id=' . $course_id . '">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="deleteProfessor.php?prof_id=' . $prof_id . '&amp;course_id=' . $course_id . '">Delete</a>
 
                     </td>
                     </tr>

@@ -12,12 +12,13 @@ if($connection->connect_error){
     die("Connection Failed: " . $connection->connect_error);
 }
 
-if(isset($_GET['prof_id'])) {
+if(isset($_GET['prof_id']) && isset($_GET['course_id'])) {
     $prof_id = $_GET['prof_id'];
+    $course_id = $_GET['course_id'];
 
     // Use prepared statement to prevent SQL injection
-    $stmt = $connection->prepare("SELECT * FROM professor WHERE prof_id = ?");
-    $stmt->bind_param("s", $prof_id);
+    $stmt = $connection->prepare("SELECT * FROM professor WHERE prof_id = ? AND course_id=?");
+    $stmt->bind_param("ss", $prof_id,$course_id);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -31,7 +32,6 @@ if(isset($_GET['prof_id'])) {
     $fname = $row['fname'];
     $mname = $row['mname'];
     $lname = $row['lname'];
-    $course_id = $row['course_id'];
     $email= $row['email'];
     $phone_no = $row['phone_no'];
     $salary = $row['salary'];
@@ -47,14 +47,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $fname = htmlspecialchars($_POST['fname']);
     $mname = htmlspecialchars($_POST['mname']);
     $lname = htmlspecialchars($_POST['lname']);
-    $course_id = htmlspecialchars($_POST['course_id']);
     $email = htmlspecialchars($_POST['email']);
     $phone_no = htmlspecialchars($_POST['phone_no']);
     $salary = htmlspecialchars($_POST['salary']);
 
     // Update student details in the database
-    $stmt = $connection->prepare("UPDATE professor SET fname=?, mname=?, lname=?, course_id=?, email=?, phone_no=?, salary=? WHERE prof_id=?");
-    $stmt->bind_param("ssssssss", $fname, $mname, $lname, $course_id, $email, $phone_no, $salary, $prof_id);
+    $stmt = $connection->prepare("UPDATE professor SET fname=?, mname=?, lname=?, email=?, phone_no=?, salary=? WHERE prof_id=? AND course_id=?");
+    $stmt->bind_param("ssssssss", $fname, $mname, $lname, $email, $phone_no, $salary, $prof_id,$course_id);
 
     if ($stmt->execute()) {
         echo "Professor details updated successfully.";
@@ -113,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" class="form-control" id="salary" name="salary" value="<?php echo $salary; ?>">
             </div>
             <!-- Add more fields as needed -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
     </div>
 </body>

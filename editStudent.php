@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" class="form-control" id="email" name="email" value="<?php echo $email; ?>">
             </div>
             <!-- Add more fields as needed -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
     </div>
 </body>

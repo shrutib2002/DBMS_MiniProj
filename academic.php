@@ -62,7 +62,7 @@
   <div id="content">
 <div class="container my-5">
         <h2>List of Academic Years</h2>
-        <a class="btn btn-primary" href="createAcademic.php" role="button">New Academic Year</a>
+        <a class="btn btn-secondary" href="createAcademic.php" role="button">New Academic Year</a>
         <br><br>
         <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
@@ -100,7 +100,7 @@
                     <td>'.$ac_id.'</td>
                     <td>'.$year.'</td>
                     <td>
-                    <a class="btn btn-primary btn-sm" href="editAcademic.php?ac_id='.$ac_id.'">Edit</a>
+                    <a class="btn btn-secondary btn-sm" href="editAcademic.php?ac_id='.$ac_id.'">Edit</a>
                     <a class="btn btn-danger btn-sm" href="deleteAcademic.php?ac_id='.$ac_id.'">Delete</a>
 
                     </td>

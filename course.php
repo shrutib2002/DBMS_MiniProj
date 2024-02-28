@@ -62,7 +62,7 @@
   <div id="content">
 <div class="container my-5">
         <h2>List of Courses</h2>
-        <a class="btn btn-primary" href="createCourse.php" role="button">New Course</a>
+        <a class="btn btn-secondary" href="createCourse.php" role="button">New Course</a>
         <br><br>
         <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
@@ -103,7 +103,7 @@
                     <td>'.$name.'</td>
                     <td>'.$total_class.'</td>
                     <td>
-                    <a class="btn btn-primary btn-sm" href="editCourse.php?course_id='.$course_id.'">Edit</a>
+                    <a class="btn btn-secondary btn-sm" href="editCourse.php?course_id='.$course_id.'">Edit</a>
                     <a class="btn btn-danger btn-sm" href="deleteCourse.php?course_id='.$course_id.'">Delete</a>
 
                     </td>

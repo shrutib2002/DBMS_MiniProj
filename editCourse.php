@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="text" class="form-control" id="total_class" name="total_class" value="<?php echo $total_class; ?>">
             </div>
             <!-- Add more fields as needed -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
     </div>
 </body>

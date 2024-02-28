@@ -1,3 +1,29 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "student_management";
+
+$connection = new mysqli($servername, $username, $password, $database);
+
+if ($connection->connect_error) {
+    die("Connection Failed: " . $connection->connect_error);
+}
+
+$searched_usn = "";
+if (isset($_GET['search_usn'])) {
+    $searched_usn = $_GET['search_usn'];
+    $sql = "SELECT * FROM marks WHERE usn LIKE '%$searched_usn%'";
+} else {
+    $sql = "SELECT * FROM marks";
+}
+
+$result = $connection->query($sql);
+
+if (!$result) {
+    die("Invalid query: " . $connection->error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,74 +85,66 @@
       </ul>
       <footer></footer>
   </div>
-  <div id="content">
-<div class="container my-5">
-        <h2>List of Attendance</h2>
-        <a class="btn btn-secondary" href="createAttendance.php" role="button">New Attendance</a>
+<div id="content">
+    <div class="container my-5">
+        <h2>List of Marks</h2>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Search by USN" id="search_usn">
+            <button class="btn btn-primary" onclick="searchMarks()">Search</button>
+        </div>
+        <a class="btn btn-primary" href="createMarks.php" role="button">New Marks</a>
         <br><br>
         <table class="table table-bordered" style="border: 1.5px solid black">
             <thead>
                 <tr>
-                    <th>Attendance Id</th>
                     <th>USN</th>
                     <th>Course Id</th>
-                    <th>Semester</th>
-                    <th>Attended</th>
-                    <th>Date</th>
-                    <th>Time</th>
+                    <th>Internal Marks</th>
+                    <th>External Marks</th>
+                    <th>Total</th>
+                    <th>Academic Id</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $servername= "localhost";
-                $username ="root";
-                $password="";
-                $database ="student_management";
-                 
-                $connection =new mysqli( $servername,  $username,  $password,$database );
-
-                if($connection->connect_error){
-                    die("Connection Failed:" .$connection->connect_error);
-                }
-                $sql ="SELECT * FROM attendance";
-                $result =$connection->query($sql);
-
-                if(!$result){
-                    die("Invalid query:" .$connection->error);
-                }
-
-                while($row = $result->fetch_assoc()){
-                    $aid = $row['aid'];
+                while ($row = $result->fetch_assoc()) {
                     $usn = $row['usn'];
                     $course_id = $row['course_id'];
-                    $sem = $row['sem'];
-                    $attended = $row['attended'];
-                    $date= $row['date'];
-                    $time= $row['time'];
-                   
-                    echo '
-                    <tr>
-                    <td>'.$aid.'</td>
-                    <td>'.$usn.'</td>
-                    <td>'.$course_id.'</td>
-                    <td>'.$sem.'</td>
-                    <td>'.$attended.'</td>
-                    <td>'.$date.'</td>
-                    <td>'.$time.'</td>
-                    <td>
-                    <a class="btn btn-secondary btn-sm" href="editAttendance.php?aid='.$aid.'">Edit</a>
-                    <a class="btn btn-danger btn-sm" href="deleteAttendance.php?aid='.$aid.'">Delete</a>
+                    $int_marks = $row['int_marks'];
+                    $ext_marks = $row['ext_marks'];
+                    $total = $row['total'];
+                    $ac_id = $row['ac_id'];
+                    $status = $row['status'];
 
-                    </td>
-                    </tr>
+                    echo '
+                        <tr>
+                            <td>' . $usn . '</td>
+                            <td>' . $course_id . '</td>
+                            <td>' . $int_marks . '</td>
+                            <td>' . $ext_marks . '</td>
+                            <td>' . $total . '</td>
+                            <td>' . $ac_id . '</td>
+                            <td>' . $status . '</td>
+                            <td>
+                                <a class="btn btn-primary btn-sm" href="editMarks.php?usn=' . $usn . '&amp;course_id=' . $course_id . '">Edit</a>
+                                <a class="btn btn-danger btn-sm" href="deleteMarks.php?usn=' . $usn . '&amp;course_id=' . $course_id . '">Delete</a>
+                            </td>
+                        </tr>
                     ';
                 }
-
                 ?>
             </tbody>
         </table>
     </div>
             </div>
+
+    <script>
+        function searchMarks() {
+            var search_usn = document.getElementById("search_usn").value;
+            window.location.href = "marks.php?search_usn=" + search_usn;
+        }
+    </script>
 </body>
 </html>

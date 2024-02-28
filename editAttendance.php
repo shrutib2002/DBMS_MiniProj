@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             
             <!-- Add more fields as needed -->
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-secondary">Submit</button>
         </form>
     </div>
 </body>
