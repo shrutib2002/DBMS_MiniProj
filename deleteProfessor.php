@@ -18,7 +18,7 @@ if (isset($_GET['prof_id']) && isset($_GET['course_id'])) {
 
     // Use prepared statement to prevent SQL injection
     $stmt = $connection->prepare("DELETE FROM professor WHERE prof_id = ? AND course_id = ?");
-    $stmt->bind_param("ss", $prof_id, $course_id); // Assuming usn and course_id are strings. Change the "s" if they are another type.
+    $stmt->bind_param("is", $prof_id, $course_id); // Assuming usn and course_id are strings. Change the "s" if they are another type.0
 
     if (isset($_GET['confirm']) && $_GET['confirm'] == 'true') {
         // User has confirmed the deletion
